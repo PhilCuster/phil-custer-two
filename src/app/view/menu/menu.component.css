@@ -1,6 +1,12 @@
+.main-container {
+    height: 100vh;
+}
 .toolbar-spacer {
     flex: 1 1 auto;
 }
 .toolbar-icon {
-    padding: 0 14px;
+    padding: 0 10px;
+}
+.site-title {
+    padding: 0 20px 0 10px;
 }

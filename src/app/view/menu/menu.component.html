@@ -1,8 +1,36 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Phil Custer</span>
+<div class="main-container">
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <a mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon aria-label="Open Side Navigation">menu</mat-icon>
+      </a>
+    </div>
+
+    <span class="site-title">Phil Custer</span>
+
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button routerLink="">Home</a>
+      <a mat-button routerLink="/about">About Me</a>
+    </div>
+
+    <!-- Navbar Spacer-->
     <span class="toolbar-spacer"></span>
+
     <mat-icon class="toolbar-icon">favorite</mat-icon>
     <mat-icon class="toolbar-icon">delete</mat-icon>
-  </mat-toolbar-row>
-</mat-toolbar>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill class="sidenav">
+
+    <mat-sidenav #sidenav fxLayout="column">
+      <div fxLayout="column">
+        <a mat-button routerLink="">Home</a>
+        <a mat-button routerLink="/about">About Me</a>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+</div>
