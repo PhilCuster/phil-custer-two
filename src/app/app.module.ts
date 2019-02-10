@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 // Angular Material
 import {
   MatButtonModule,
+  MatCardModule,
   MatIconModule,
   MatSidenavModule,
   MatToolbarModule,
@@ -47,6 +48,7 @@ const appRoutes = [
 
     // Angular Material
     MatButtonModule,
+    MatCardModule,
     MatIconModule,
     MatSidenavModule,
     MatToolbarModule,
